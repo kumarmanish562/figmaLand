@@ -1,29 +1,53 @@
-/* Import Open Sans font from Google Fonts */
+/* ==========================================================================
+   GOOGLE FONTS IMPORT
+   ========================================================================== */
+/* Import Open Sans font from Google Fonts with multiple weights */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
-/* --- global.css --- */
+
+/* ==========================================================================
+   GLOBAL STYLES & CSS VARIABLES
+   ========================================================================== */
+
+/* Universal box-sizing reset for all elements */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
+/* CSS Custom Properties (Variables) for consistent theming */
 :root {
+  /* Color Variables */
   --white: #fff;
-  --text-dark: #252b42;
-  --text-grey: #374754;
-  --btn-color: #2091f9;
-  --btn-hover: #43b6ff;
-  --color-menu: #3c3c3c;
-  --color-title-menu: #323235e3;
-  --hr-menu: #e376fb;
-  --icon-blue-hover: #1977cf;
-  --input-background: #f4f4f4;
-  --border-form: #dddddd;
-  --border-input: #e8e8e8;
-  --partners-border: #d8d8d8;
-  --shadow-color: rgba(0, 0, 0, 0.15);
+  --text-dark: #252b42;        /* Dark text color for headings */
+  --text-grey: #374754;        /* Grey text color for body text */
+  --btn-color: #2091f9;        /* Primary button color (blue) */
+  --btn-hover: #43b6ff;        /* Button hover state color */
+  
+  /* Menu & Navigation Colors */
+  --color-menu: #3c3c3c;       /* Mobile menu background */
+  --color-title-menu: #323235e3; /* Menu title background with opacity */
+  --hr-menu: #e376fb;          /* Menu border/separator color (purple) */
+  --icon-blue-hover: #1977cf;  /* Icon hover state color */
+  
+  /* Form & Input Colors */
+  --input-background: #f4f4f4; /* Form input background color */
+  --border-form: #dddddd;      /* Form border color */
+  --border-input: #e8e8e8;     /* Input field border color */
+  
+  /* Other UI Colors */
+  --partners-border: #d8d8d8;  /* Partners section border color */
+  --shadow-color: rgba(0, 0, 0, 0.15); /* Box shadow color with opacity */
+  
+  /* Smooth scrolling behavior for anchor links */
   scroll-behavior: smooth;
 }
 
+/* ==========================================================================
+   BASE TYPOGRAPHY & LAYOUT
+   ========================================================================== */
+
+/* Base body styles - sets default font and text properties */
 body {
   font-family: "Open Sans", "Graphik", Arial, sans-serif;
   letter-spacing: 0.2px;
@@ -31,16 +55,19 @@ body {
   color: var(--text-grey);
 }
 
+/* Default image styles - responsive and block-level */
 img {
   display: block;
   width: 100%;
 }
 
+/* Main container for content with responsive padding */
 .container {
   padding: 0 10px;
   margin: auto;
 }
 
+/* Content box component for section headers */
 .content-box {
   width: 285px;
   font-size: 28px;
@@ -49,11 +76,13 @@ img {
   margin: 0 auto 80px;
 }
 
+/* Remove default list styling */
 ul {
   list-style: none;
   padding: 0;
 }
 
+/* Base link styles with smooth color transitions */
 a {
   display: inline-block;
   text-decoration: none;
@@ -61,10 +90,12 @@ a {
   color: var(--white);
 }
 
+/* Link hover effect */
 a:hover {
   color: var(--btn-color);
 }
 
+/* Main heading styles (h2) */
 h2 {
   font-size: 48px;
   font-weight: 500;
@@ -72,6 +103,7 @@ h2 {
   margin-bottom: 26px;
 }
 
+/* Textarea specific styling */
 textarea {
   height: 193px;
   resize: none;
@@ -79,14 +111,21 @@ textarea {
   letter-spacing: 0.2px;
 }
 
+/* Reset address styling to normal text */
 address {
   font-style: normal;
 }
 
+/* Center iframe elements */
 iframe {
   margin: 0 auto;
 }
 
+/* ==========================================================================
+   FORM INPUT STYLES
+   ========================================================================== */
+
+/* Base form input and textarea styling */
 .form-input,
 textarea {
   min-width: 100%;
@@ -97,15 +136,22 @@ textarea {
   padding: 19px 39px;
 }
 
+/* Placeholder text styling for webkit browsers */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: var(--text-dark);
 }
 
+/* Rounded corners for form inputs */
 .form-input {
   border-radius: 39px;
 }
 
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS - GLOBAL
+   ========================================================================== */
+
+/* Tablet styles - 768px and up */
 @media(min-width: 768px) {
   .content-box {
     max-width: 552px;
@@ -117,6 +163,7 @@ textarea::-webkit-input-placeholder {
   }
 }
 
+/* Small tablet styles - 580px and up */
 @media(min-width: 580px) {
   .container {
     max-width: 1280px;
@@ -124,19 +171,25 @@ textarea::-webkit-input-placeholder {
   }
 }
 
+/* Desktop styles - 992px and up */
 @media(min-width: 992px) {
   .container {
     padding: 0 40px;
   }
 }
 
+/* Large desktop styles - 1200px and up */
 @media(min-width: 1200px) {
   .container {
     padding: 0 20px;
   }
 }
 
-/* --- btns.css --- */
+/* ==========================================================================
+   BUTTON STYLES
+   ========================================================================== */
+
+/* Base button styling */
 .btn {
   font-size: 20px;
   line-height: 20px;
@@ -149,26 +202,31 @@ textarea::-webkit-input-placeholder {
   cursor: pointer;
 }
 
+/* Bold button variant */
 .btn-bold {
   line-height: 28px;
   font-weight: 700;
   padding: 16px 60px;
 }
 
+/* Button styling for subscription forms */
 .form-sub .btn {
   padding: 19px 38px;
 }
 
+/* Button styling for contact forms */
 .contact-form .btn {
   align-self: self-start;
   padding: 18px 48px;
 }
 
+/* Button styling for active pricing plan */
 .active .btn {
   color: var(--btn-color);
   background: var(--white);
 }
 
+/* Button hover effects */
 .btn:hover,
 a.btn:hover {
   transform: scale(1.07);
@@ -176,32 +234,45 @@ a.btn:hover {
   background: var(--btn-hover);
 }
 
+/* ==========================================================================
+   SOCIAL MEDIA ICON STYLES
+   ========================================================================== */
+
+/* Font Awesome brand icons base styling */
 .fa-brands {
   font-size: 38px;
   color: var(--white);
   transition: all 0.5s ease;
 }
 
+/* Blue icon variant */
 .icon-blue {
   color: var(--btn-color);
   transition: all 0.5s ease;
 }
 
+/* Social media icon hover effects */
 .fa-brands:hover {
     transform: scale(1.12);
     color: var(--btn-hover);
 }
 
+/* Blue icon hover effects */
 .icon-blue:hover {
     transform: scale(1.12);
     color: var(--icon-blue-hover);
 }
 
-/* --- header.css --- */
+/* ==========================================================================
+   HEADER SECTION STYLES
+   ========================================================================== */
+
+/* Main header container */
 .header {
   position: relative;
 }
 
+/* Header background with hero image */
 .header__background {
   max-height: 100%;
   min-height: 100%;
@@ -211,6 +282,7 @@ a.btn:hover {
   background-repeat: no-repeat;
 }
 
+/* Sub-menu container for logo and mobile toggle */
 .header__sub-menu {
   width: 100%;
   display: flex;
@@ -218,27 +290,33 @@ a.btn:hover {
   justify-content: space-between;
 }
 
+/* Header logo styling */
 .header__logo {
   width: 206px;
 }
 
+/* Navigation box container */
 .header__nav-box {
   width: 100%;
 }
 
+/* Base navigation list styling */
 .nav__list {
   display: flex;
   align-items: center;
 }
 
+/* Social media icons spacing */
 .social-icons {
   gap: 28px;
 }
 
+/* Mobile menu toggle button (hidden by default) */
 .header__icon-bar {
   display: none;
 }
 
+/* Hero/Intro section styling */
 .intro {
   font-size: 28px;
   line-height: 40px;
@@ -247,11 +325,13 @@ a.btn:hover {
   padding: 90px 0 237px;
 }
 
+/* Intro content container */
 .intro__content {
   width: 353px;
   margin: 0 auto 94px;
 }
 
+/* Main heading (h1) styling */
 h1 {
   font-size: 48px;
   font-weight: 400;
@@ -259,21 +339,32 @@ h1 {
   margin-bottom: 30px;
 }
 
+/* ==========================================================================
+   HEADER - MOBILE RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Mobile styles - 767px and below */
 @media(max-width: 767px) {
+  /* Hide navigation and social icons on mobile */
   .header__nav,
   .header .social-icons {
     display: none;
   }
+  
+  /* Show mobile menu toggle button */
   .header__nav-box a.header__icon-bar {
     display: block;
   }
 
+  /* Hide elements with 'hidden' class on mobile */
   .hidden {
     display: none;
   }
 }
 
+/* Mobile responsive menu styles */
 @media(max-width: 767px) {
+  /* Responsive menu styling when active */
   .header.responsive .header__sub-menu {
     position: absolute;
     width: 100%;
@@ -284,30 +375,36 @@ h1 {
     padding: 0 10px;
   }
 
+  /* Show navigation when responsive class is active */
   .header.responsive .header__nav {
     display: block;
   }
 
+  /* Mobile navigation item styling */
   .nav__item {
     width: 80%;
     text-align: center;
     transition: all 0.5s ease;
   }
 
+  /* Navigation item hover effect */
   .nav__item:hover {
     background: var(--btn-color);
   }
 
+  /* Navigation link styling in mobile menu */
   .nav__item a {
     display: inline-block;
     padding: 20px 0;
     width: 100%;
   }
 
+  /* Navigation link hover color */
   .nav__item a:hover {
     color: var(--white);
   }
 
+  /* Mobile navigation list layout */
   .header.responsive .nav__list {
     position: absolute;
     top: 80px;
@@ -321,6 +418,7 @@ h1 {
     margin: -1px 0;
   }
 
+  /* Mobile social icons layout */
   .header.responsive .social-icons {
     display: block;
     top: 495px;
@@ -329,12 +427,19 @@ h1 {
     justify-content: center;
   }
 
+  /* Adjust intro padding when mobile menu is active */
   .header.responsive .intro {
     padding-top: 168px;
   }
 }
 
+/* ==========================================================================
+   HEADER - TABLET & DESKTOP RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Tablet styles - 768px and up */
 @media(min-width: 768px) {
+  /* Header container layout for tablet/desktop */
   .header__container {
     max-width: 1198px;
     display: flex;
@@ -345,6 +450,7 @@ h1 {
     color: var(--white);
   }
 
+  /* Navigation box grid layout */
   .header__nav-box {
     width: 100%;
     display: grid;
@@ -353,29 +459,35 @@ h1 {
     padding: 36px 20px;
   }
 
+  /* Logo positioning */
   .header__logo {
     margin-left: 20px;
   }
 
+  /* Navigation list spacing and font size */
   .nav__list {
     font-size: 18px;
     gap: 36px;
   }
 
+  /* Social icons alignment */
   .social-icons {
     justify-self: start;
   }
 
+  /* Intro section sizing and spacing */
   .intro {
     width: 760px;
     padding: 90px 0 286px;
   }
 
+  /* Intro content container adjustments */
   .intro__content {
     width: 100%;
     margin: 0 auto 72px;
   }
 
+  /* Larger heading for tablet/desktop */
   h1 {
     font-size: 74px;
     font-weight: 700;
@@ -383,22 +495,30 @@ h1 {
   }
 }
 
+/* Desktop styles - 992px and up */
 @media(min-width: 992px) {
+  /* Three-column grid layout for header navigation */
   .header__nav-box {
     grid-template-columns: 437px auto auto;
   }
 
+  /* Smaller navigation font size for desktop */
   .nav__list {
     font-size: 15px;
     gap: 41px;
   }
 
+  /* Right-align social icons on desktop */
   .social-icons {
     justify-self: end;
   }
 }
 
-/* --- features.css --- */
+/* ==========================================================================
+   FEATURES SECTION STYLES
+   ========================================================================== */
+
+/* Main features section layout using CSS Grid */
 .features {
   display: grid;
   grid-template-rows: auto;
@@ -409,11 +529,13 @@ h1 {
   padding: 80px 0 98px;
 }
 
+/* Features section header */
 .features__info {
   grid-area: info;
   margin: 0 auto 60px;
 }
 
+/* Features list container */
 .features__list {
   grid-area: list;
   max-width: 870px;
@@ -424,6 +546,7 @@ h1 {
   gap: 76px;
 }
 
+/* Individual feature item styling */
 .features__list-item {
   max-width: 231px;
   display: flex;
@@ -434,15 +557,18 @@ h1 {
   gap: 20px;
 }
 
+/* Feature icons */
 .features__list-img {
   max-width: 61px;
 }
 
+/* Feature titles */
 .features__list-title {
   font-size: 20px;
   color: var(--text-dark);
 }
 
+/* Feature video/demo section */
 .feature__video {
   grid-area: video;
   position: relative;
@@ -453,6 +579,7 @@ h1 {
   margin: 0 0 76px;
 }
 
+/* Play button overlay on video */
 .feature__video::after {
   content: "";
   background-image: url("assets/icons/play-button.svg");
@@ -465,6 +592,11 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+/* ==========================================================================
+   FEATURES SECTION - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Mobile styles for features video */
 @media(max-width: 767px) {
   .feature__video {
     background-image: url(../images/screen-video.jpg);
@@ -476,6 +608,7 @@ h1 {
   }
 }
 
+/* Tablet styles for features - 768px and up */
 @media(min-width: 768px) {
   .features__list {
     max-width: 870px;
@@ -501,6 +634,7 @@ h1 {
   }
 }
 
+/* Desktop styles for features - 992px and up */
 @media(min-width: 992px) {
   .features {
     grid-template-areas:
@@ -529,7 +663,11 @@ h1 {
   }
 }
 
-/* --- promotion.css --- */
+/* ==========================================================================
+   PROMOTION SECTION STYLES
+   ========================================================================== */
+
+/* Main promotion section layout */
 .promotion {
   display: flex;
   justify-content: center;
@@ -541,15 +679,22 @@ h1 {
   gap: 60px;
 }
 
+/* Promotion content container */
 .promotion__content {
   width: 355px;
   margin: 0 0 60px;
 }
 
+/* Promotion description text */
 .promotion__description {
   line-height: 40px;
 }
 
+/* ==========================================================================
+   PROMOTION SECTION - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Tablet styles for promotion - 768px and up */
 @media(min-width: 768px) {
   .promotion__content {
     max-width: 524px;
@@ -561,6 +706,7 @@ h1 {
   }  
 }
 
+/* Large tablet/small desktop - 1040px and up */
 @media(min-width: 1040px) {
   .promotion {
     flex-wrap: nowrap;
@@ -575,13 +721,18 @@ h1 {
   }  
 }
 
+/* Large desktop styles - 1200px and up */
 @media(min-width: 1200px) {
   .promotion__img {
     max-width: 662px;
   }  
 }
 
-/* --- subscribe.css --- */
+/* ==========================================================================
+   NEWSLETTER SUBSCRIPTION SECTION STYLES
+   ========================================================================== */
+
+/* Main subscribe section using CSS Grid layout */
 .subscribe {
   display: grid;
   align-items: center;
@@ -596,14 +747,17 @@ h1 {
   row-gap: 60px;
 }
 
+/* Subscribe section image */
 .subscribe__img {
   grid-area: img;
 }
 
+/* Subscribe content area */
 .subscribe__content {
   grid-area: info;
 }
 
+/* Subscribe section titles */
 .subscribe__sub-title,
 .subscribe__form-title {
   font-size: 20px;
@@ -611,19 +765,23 @@ h1 {
   color: var(--text-dark);
 }
 
+/* Subscribe subtitle spacing */
 .subscribe__sub-title {
   margin-bottom: 25px;
 }
 
+/* Subscribe main title */
 .subscribe__title {
   color: var(--text-grey);
   margin: 10px 0 34px;
 }
 
+/* Remove class styling for mobile-specific content */
 p.remove {
   font-size: 28px;
 }
 
+/* Subscribe form container */
 .subscribe__form {
   grid-area: form;
   display: flex;
@@ -631,6 +789,7 @@ p.remove {
   gap: 12px;
 }
 
+/* Form input container with button */
 .subscribe__form-container {
   display: flex;
   align-items: center;
@@ -640,6 +799,11 @@ p.remove {
   gap: 12px;
 }
 
+/* ==========================================================================
+   SUBSCRIPTION SECTION - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Mobile styles for subscription form */
 @media(max-width: 767px) {
   .subscribe__form-input {
     width: 100%;
@@ -650,6 +814,7 @@ p.remove {
   }
 }
 
+/* Small screen adjustments - 500px and up */
 @media(min-width: 500px) {
   .subscribe__form-container {
     width: 80%;
@@ -657,6 +822,7 @@ p.remove {
   }
 }
 
+/* Tablet styles for subscription - 768px and up */
 @media(min-width: 768px) {
   .subscribe {
     row-gap: 20px;
@@ -666,11 +832,13 @@ p.remove {
     max-width: 678px;
   }
 
+  /* Hide mobile-specific content on larger screens */
   .remove {
     display: none;
   }
 }
 
+/* Desktop styles for subscription - 992px and up */
 @media(min-width: 992px) {
   .subscribe {
     grid-template-areas:
@@ -702,12 +870,17 @@ p.remove {
   }
 }
 
-/* --- partners.css --- */
+/* ==========================================================================
+   PARTNERS SECTION STYLES
+   ========================================================================== */
+
+/* Main partners section */
 .partners {
   text-align: center;
   padding: 80px 0;
 }
 
+/* Partners list container */
 .partners__list {
   display: flex;
   flex-wrap: wrap;
@@ -716,6 +889,7 @@ p.remove {
   gap: 30px;
 }
 
+/* Individual partner item styling */
 .partners__list-item {
   width: 80%;
   display: flex;
@@ -727,21 +901,29 @@ p.remove {
   gap: 20px;
 }
 
+/* Partner client name text */
 .partners__list-name {
   font-size: 15px;
   line-height: 23px;
 }
 
+/* Partner logo images */
 .partners__list-img {
   width: 100%;
 }
 
+/* ==========================================================================
+   PARTNERS SECTION - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Mobile - hide partners beyond first 3 */
 @media(max-width: 767px) {
   .partners__list li:not(:nth-child(-n + 3)) {
     display: none;
   }
 }
 
+/* Tablet styles - 768px and up */
 @media(min-width: 768px) {
   .partners__list {
     gap: 0;
@@ -752,19 +934,25 @@ p.remove {
   }
 }
 
+/* Desktop styles - 992px and up */
 @media(min-width: 992px) {
   .partners__list-item {
     width: 25%;
   }
 }
 
+/* Large desktop styles - 1200px and up */
 @media(min-width: 1200px) {
   .partners__list-item {
     width: fit-content;
   }
 }
 
-/* --- testimonials.css --- */
+/* ==========================================================================
+   TESTIMONIALS SECTION STYLES
+   ========================================================================== */
+
+/* Main testimonials section */
 .testimonials {
   font-size: 14px;
   font-weight: 600;
@@ -773,6 +961,7 @@ p.remove {
   padding: 100px 0;
 }
 
+/* Individual testimonial container */
 .testimonial {
   display: flex;
   width: 80%;
@@ -784,41 +973,53 @@ p.remove {
   gap: 50px;
 }
 
+/* Testimonial company logo */
 .testimonial__img {
   max-width: 149px;
 }
 
+/* Testimonial user information container */
 .testimonial__user {
   display: flex;
   align-items: center;
   gap: 13px;
 }
 
+/* User profile photo */
 .testimonial__user-photo {
   width: 50px;
   height: 50px;
   border-radius: 40px;
 }
 
+/* User information text */
 .testimonial__user-info {
   font-size: 11px;
   line-height: 21px;
   text-align: left;
 }
 
+/* User position/title */
 .testimonial__user-position {
   font-weight: 400;
 }
 
+/* Testimonial navigation dots */
 .testimonial__dots {
   margin-top: 24px;
   text-align: center;
 }
 
+/* Individual dot styling */
 .testimonial-dot {
   transition: background 0.3s, border 0.3s;
 }
 
+/* ==========================================================================
+   TESTIMONIALS SECTION - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Small tablet styles - 530px and up */
 @media(min-width: 530px) {
   .testimonials {
     max-width: 967px;
@@ -835,12 +1036,14 @@ p.remove {
   }
 }
 
+/* Tablet styles - 768px and up */
 @media(min-width: 768px) {
   .testimonials {
     font-size: 28px;
   }
 }
 
+/* Desktop styles - 992px and up */
 @media(min-width: 992px) {
   .testimonials {
     padding: 110px 0 100px;
@@ -851,7 +1054,11 @@ p.remove {
   }
 }
 
-/* --- pricing.css --- */
+/* ==========================================================================
+   PRICING SECTION STYLES
+   ========================================================================== */
+
+/* Main pricing section with dark background */
 .pricing {
   width: 100%;
   color: var(--white);
@@ -859,10 +1066,12 @@ p.remove {
   padding: 110px 0;
 }
 
+/* Pricing section title (override default h2 color) */
 .pricing__title {
   color: var(--white);
 }
 
+/* Pricing plans container */
 .pricing__list {
   display: flex;
   justify-content: center;
@@ -872,6 +1081,7 @@ p.remove {
   gap: 50px;
 }
 
+/* Individual pricing plan card */
 .pricing__item {
   display: flex;
   flex-direction: column;
@@ -883,6 +1093,7 @@ p.remove {
   gap: 30px;
 }
 
+/* Plan information section */
 .pricing__plan {
   font-size: 16px;
   line-height: 23px;
@@ -890,17 +1101,20 @@ p.remove {
   text-align: center;
 }
 
+/* Plan name/title */
 .pricing__plan-name {
   color: var(--text-dark);
   margin-bottom: 4px;
 }
 
+/* Price container */
 .pricing__price {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+/* Large price value */
 .pricing__price-value {
   font-size: 74px;
   font-weight: 700;
@@ -908,11 +1122,13 @@ p.remove {
   color: var(--text-dark);
 }
 
+/* Price details (currency and period) */
 .pricing__price-details {
   display: flex;
   flex-direction: column;
 }
 
+/* Currency symbol */
 .pricing__price-currency {
   font-size: 20px;
   font-weight: 700;
@@ -920,6 +1136,7 @@ p.remove {
   color: var(--text-dark);
 }
 
+/* Features list for each plan */
 .pricing__features {
   display: flex;
   flex-direction: column;
@@ -928,28 +1145,40 @@ p.remove {
   gap: 20px;
 }
 
+/* Active/featured pricing plan styling */
 .active {
   color: var(--white);
   background: var(--btn-color);
 }
 
+/* Text color overrides for active plan */
 .active h3,
 .active .pricing__price-value,
 .active .pricing__price-currency {
   color: var(--white);
 }
 
+/* ==========================================================================
+   PRICING SECTION - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Large desktop styles - 1105px and up */
 @media(min-width: 1105px) {
   .active {
     padding: 83px 40px;
   }
 }
 
-/* --- contacts.css --- */
+/* ==========================================================================
+   CONTACT SECTION STYLES
+   ========================================================================== */
+
+/* Main contact section */
 .contact {
   padding: 150px 0;
 }
 
+/* Contact information container */
 .contact__info {
   min-width: 300px;
   display: flex;
@@ -960,6 +1189,7 @@ p.remove {
   gap: 60px;
 }
 
+/* Contact form and form elements styling */
 .contact__form,
 .contact__form-elements {
   width: 100%;
@@ -970,6 +1200,7 @@ p.remove {
   gap: 45px;
 }
 
+/* Contact form container with border and shadow */
 .contact__form {
   border: 1px solid var(--border-form);
   box-shadow: 2px 11px 12px var(--shadow-color);
@@ -977,21 +1208,25 @@ p.remove {
   padding: 52px 25px;
 }
 
+/* Contact form title */
 .contact__form-title {
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
 }
 
+/* Contact form input fields */
 .contact__input {
   width: 100%;
   padding: 19px 20px;
 }
 
+/* Contact form submit button */
 .contact__form-elements .btn {
   width: 100%;
 }
 
+/* Contact address information container */
 .contact__address-info {
   display: flex;
   flex-direction: column-reverse;
@@ -999,6 +1234,7 @@ p.remove {
   gap: 80px;
 }
 
+/* Address list container */
 .address__list {
   width: 90%;
   display: flex;
@@ -1008,6 +1244,7 @@ p.remove {
   gap: 15px;
 }
 
+/* Individual address item */
 .address__item {
   display: flex;
   justify-content: center;
@@ -1015,14 +1252,17 @@ p.remove {
   gap: 20px;
 }
 
+/* Address text links */
 .address__text a {
   color: var(--text-grey);
 }
 
+/* Address text styling */
 .address__text {
   font-size: 16px;
 }
 
+/* Address icon sizes */
 .icon-location {
   width: 28px;
 }
@@ -1035,6 +1275,11 @@ p.remove {
   width: 32px;
 }
 
+/* ==========================================================================
+   CONTACT SECTION - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Small screens - 500px and up */
 @media(min-width: 500px) {
   .contact__form {
     padding: 52px 50px;
@@ -1047,16 +1292,16 @@ p.remove {
   }
 }
 
+/* Medium screens - 600px and up */
 @media(min-width: 600px) {
-
   .contact__form,
   .contact__form-elements {
     max-width: 453px;
   }
 }
 
+/* Tablet styles - 768px and up */
 @media(min-width: 768px) {
-
   .contact__form,
   .contact__form-elements {
     max-width: 553px;
@@ -1066,6 +1311,7 @@ p.remove {
     gap: 50px;
   }
 
+  /* Google Maps iframe styling */
   .contact__map {
     width: 516px;
     height: 330px;
@@ -1073,6 +1319,7 @@ p.remove {
   }
 }
 
+/* Large tablet - 892px and up */
 @media(min-width: 892px) {
   .contact__address-info {
     flex-direction: column;
@@ -1080,6 +1327,7 @@ p.remove {
   }
 }
 
+/* Desktop styles - 992px and up */
 @media(min-width: 992px) {
   .contact__info {
     flex-direction: row;
@@ -1097,6 +1345,7 @@ p.remove {
   }
 }
 
+/* Large desktop - 1200px and up */
 @media(min-width: 1200px) {
   .address__list {
     width: 100%;
@@ -1116,16 +1365,22 @@ p.remove {
   }
 }
 
-/* --- footer.css --- */
+/* ==========================================================================
+   FOOTER SECTION STYLES
+   ========================================================================== */
+
+/* Main footer styling with dark background */
 footer {
   color: var(--white);
   background: var(--text-dark);
 }
 
+/* Footer links styling */
 footer a {
   color: var(--white);
 }
 
+/* Footer content container */
 .footer__content {
   display: flex;
   flex-direction: column;
@@ -1136,6 +1391,7 @@ footer a {
   gap: 76px;
 }
 
+/* Footer navigation columns container */
 .footer__columns {
   display: flex;
   flex-direction: column;
@@ -1144,12 +1400,14 @@ footer a {
   gap: 73px;
 }
 
+/* Column titles in footer */
 .column__title {
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 25px;
 }
 
+/* Column list styling */
 .column__list {
   display: flex;
   flex-direction: column;
@@ -1158,14 +1416,17 @@ footer a {
   gap: 16px;
 }
 
+/* Individual column items */
 .column__item {
   width: 170px;
 }
 
+/* Footer address list */
 .footer__address-list {
   width: 100%;
 }
 
+/* Footer address information container */
 .footer__address-info {
   display: flex;
   flex-direction: column;
@@ -1173,20 +1434,28 @@ footer a {
   gap: 30px;
 }
 
+/* Individual footer address items */
 .footer__address-item {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* Footer address text */
 .footer__addres-text {
   font-size: 16px;
 }
 
+/* Footer address icons */
 .footer__addres-icon {
   width: 42px;
 }
 
+/* ==========================================================================
+   FOOTER SECTION - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Medium screens - 600px and up */
 @media(min-width: 600px) {
   .footer__content {
     gap: 125px;
@@ -1200,6 +1469,7 @@ footer a {
   }
 }
 
+/* Desktop styles - 992px and up */
 @media(min-width: 992px) {
   .footer__content {
     max-width: 992px;
