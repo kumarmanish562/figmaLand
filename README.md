@@ -94,7 +94,7 @@ figmaLand/
 
 1. **Clone or Download**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/kumarmanish562/figmaLand.git
    # or download and extract ZIP file
    ```
 
@@ -119,7 +119,7 @@ figmaLand/
 
 4. **Access the Website**
    - Direct file: `file:///path/to/figmaLand/index.html`
-   - Local server: `http://localhost:8000`
+   - Local server: `http://localhost:5500`
 
 ## 🎯 Usage
 
@@ -265,9 +265,7 @@ btnSub.addEventListener("click", () => {
 - **Responsive**: Mobile-first approach
 - **Accessibility**: ARIA labels, keyboard navigation support
 
-## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -278,15 +276,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ---
 
-## 📞 Support
 
-For questions, issues, or suggestions:
 
-- **Email**: manish.kumar@example.com
-- **Issues**: Use the GitHub Issues tab
-- **Documentation**: Check this README for detailed information
-
----
 
 **Made with ❤️ by Manish Kumar**
 
