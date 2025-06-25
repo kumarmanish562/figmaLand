@@ -2,17 +2,25 @@
 <html lang="en">
 
 <head>
+  <!-- Meta tags for character encoding and responsive design -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- External CSS stylesheet -->
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- Page title -->
   <title>manish kumart</title>
 </head>
 
 <body>
+  <!-- Header Section with Background -->
   <div class="header__background">
     <header class="header" id="home">
       <div class="header__container container">
+        <!-- Navigation and Logo Section -->
         <div class="header__nav-box">
+          <!-- Main Navigation Menu -->
           <nav class="header__nav nav">
             <ul class="nav__list">
               <li class="nav__item"><a href="#home">Home</a></li>
@@ -22,12 +30,16 @@
               <li class="nav__item"><a href="#contact">Contact</a></li>
             </ul>
           </nav>
+          
+          <!-- Sub Menu with Logo and Mobile Toggle -->
           <div class="header__sub-menu">
             <img class="header__logo" src="/assets/icons/logo.svg" alt="Figma Land">
             <a href="javascript:void(0);" class="header__icon-bar">
               <img src="/assets/icons/btn-sub-menu.png" alt="Button">
             </a>
           </div>
+          
+          <!-- Social Media Icons -->
           <ul class="nav__list social-icons">
             <li class="social-icons__item">
               <a class="social-icons__link" href="#">
@@ -46,6 +58,8 @@
             </li>
           </ul>
         </div>
+        
+        <!-- Hero/Intro Section -->
         <section class="header__intro intro">
           <div class="intro__content">
             <h1 class="intro__content-title">
@@ -56,15 +70,19 @@
               <span class="hidden">Slate is designed for freelancers</span>
             </p>
           </div>
+          <!-- Call to Action Button -->
           <a href="#" class="btn">Try For <span class="hidden">Free</span></a>
         </section>
       </div>
     </header>
   </div>
 
+  <!-- Main Content Area -->
   <main class="main">
     <div class="container">
+      <!-- Features Section -->
       <section class="features">
+        <!-- Features Header Content -->
         <div class="features__info content-box">
           <h2 class="features__title">Features</h2>
           <p class="features__description">
@@ -72,6 +90,8 @@
             <span class="hidden"> Slate is designed for freelancers</span>
           </p>
         </div>
+        
+        <!-- Features List with Icons and Descriptions -->
         <ul class="features__list">
           <li class="features__list-item">
             <img class="features__list-img" src="assets/icons/mdi-drawing.svg" alt="Variable font">
@@ -102,10 +122,13 @@
             </p>
           </li>
         </ul>
+        
+        <!-- Feature Video/Image Section -->
         <div class="feature__video">
           <img class="feature__video-img" src="/assets/images/screen.jpg" alt="screen">
         </div>
       </section>
+      <!-- Promotion/Product Section -->
       <section class="promotion" id="product">
         <div class="promotion__container">
           <div class="promotion__content">
@@ -115,12 +138,18 @@
               <span class="hidden">Slate is designed for freelancers</span>
             </p>
           </div>
+          <!-- CTA Button -->
           <a href="#" class="btn btn-bold">Try For Free</a>
         </div>
+        <!-- Product Image -->
         <img src="assets/images/macbook.png" alt="macbook" class="promotion__img">
       </section>
+      
+      <!-- Newsletter Subscription Section -->
       <section class="subscribe">
         <img class="subscribe__img" src="assets/images/subscribe.png" alt="subscribe">
+        
+        <!-- Subscribe Content -->
         <div class="subscribe__content">
           <span class="subscribe__sub-title">At your fingertips</span>
           <h2 class="subscribe__title hidden">Lightning fast prototyping</h2>
@@ -130,6 +159,8 @@
             freelancers
           </p>
         </div>
+        
+        <!-- Newsletter Signup Form -->
         <form class="subscribe__form">
           <h3 class="subscribe__form-title">Subscribe to our Newsletter</h3>
           <p class="subscribe__form-description">
@@ -141,7 +172,9 @@
           </div>
         </form>
       </section>
+      <!-- Partners/About Section -->
       <section class="partners" id="about">
+        <!-- Partners Header -->
         <div class="partners__conteint content-box">
           <h2 class="partners__title">Partners</h2>
           <p class="partners__description">
@@ -149,8 +182,11 @@
             <span class="hidden">Slate is designed for freelancers</span>
           </p>
         </div>
+        
+        <!-- Partners Content and Logos -->
         <div class="partners__content">
           <ul class="partners__list">
+            <!-- Individual Partner Items -->
             <li class="partners__list-item">
               <span class="partners__list-name">Client Name</span>
               <img class="partners__list-img" src="assets/images/google.png" alt="google">
@@ -184,9 +220,12 @@
               <img class="partners__list-img" src="assets/images/amazon.png" alt="amazon">
             </li>
           </ul>
+          <!-- Partners CTA Button -->
           <a href="#" class="btn btn-bold">Try For Free</a>
         </div>
       </section>
+      
+      <!-- Testimonials Section -->
       <section class="testimonials">
         <h2 class="testimonials__title">Testimonials</h2>
         <div class="testimonial">
@@ -199,8 +238,10 @@
       </section>
     </div>
 
+    <!-- Pricing Section -->
     <section class="pricing">
       <div class="pricing__container container">
+        <!-- Pricing Header -->
         <div class="pricing__content content-box" id="pricing">
           <h2 class="pricing__title">Pricing</h2>
           <p class="pricing__description">
@@ -208,8 +249,11 @@
             <span class="hidden">Slate is designed for freelancers</span>
           </p>
         </div>
+        
+        <!-- Pricing Plans -->
         <div class="pricing__plans">
           <ul class="pricing__list">
+            <!-- Free Plan -->
             <li class="pricing__item">
               <div class="pricing__plan">
                 <h3 class="pricing__plan-name">FREE</h3>
@@ -233,6 +277,8 @@
               </ul>
               <a href="#" class="btn">Order Now</a>
             </li>
+            
+            <!-- Standard Plan (Active/Featured) -->
             <li class="pricing__item active">
               <div class="pricing__plan">
                 <h3 class="pricing__plan-name">STANDARD</h3>
@@ -256,6 +302,8 @@
               </ul>
               <a href="#" class="btn">Order Now</a>
             </li>
+            
+            <!-- Business Plan -->
             <li class="pricing__item">
               <div class="pricing__plan">
                 <h3 class="pricing__plan-name">BUSINESS</h3>
@@ -283,8 +331,10 @@
         </div>
       </div>
     </section>
+    <!-- Contact Section -->
     <section class="contact">
       <div class="contact__container container">
+        <!-- Contact Header -->
         <div class="contact__content content-box" id="contact">
           <h2 class="contact__title">Contact Us</h2>
           <p class="contact__description">
@@ -292,7 +342,10 @@
             <span class="hidden">Slate is designed for freelancers</span>
           </p>
         </div>
+        
+        <!-- Contact Information and Form -->
         <div class="contact__info">
+          <!-- Contact Form -->
           <form class="contact__form">
             <h3 class="contact__form-title">Contact Us</h3>
             <div class="contact__form-elements">
@@ -302,7 +355,10 @@
               <button type="submit" class="btn">Send</button>
             </div>
           </form>
+          
+          <!-- Contact Address and Map -->
           <div class="contact__address-info">
+            <!-- Address Information -->
             <address class="address">
               <ul class="address__list">
                 <li class="address__item">
@@ -329,11 +385,13 @@
               </ul>
             </address>
 
+            <!-- Embedded Google Map -->
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.216487428356!2d77.08332107495197!3d28.503133689946043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19440d251b57%3A0x5d93a3ac9d62d3ae!2sJosh%20Technology%20Group!5e0!3m2!1sen!2sin!4v1750482835335!5m2!1sen!2sin"
               style="border: 0" allowfullscreen class="contact__map hidden" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+            <!-- Contact Social Media Icons -->
             <ul class="contact__address-icons nav__list social-icons">
               <li class="social-icons__item">
                 <a href="#"><img src="assets/icons/twitter_blue.svg" alt="Twitter" width="42" height="42">
@@ -356,10 +414,13 @@
     </section>
   </main>
 
+  <!-- Footer Section -->
   <footer class="footer">
     <div class="footer__container container">
       <div class="footer__content">
+        <!-- Footer Navigation Columns -->
         <ul class="footer__columns">
+          <!-- Pages Navigation -->
           <li class="footer__column column">
             <h3 class="column__title">Pages</h3>
             <nav class="footer__nav nav">
@@ -372,6 +433,8 @@
               </ul>
             </nav>
           </li>
+          
+          <!-- Tomothy Column -->
           <li class="footer__column column">
             <h3 class="column__title">Tomothy</h3>
             <ul class="column__list">
@@ -382,6 +445,8 @@
               <li class="column__item">Gloria Richards</li>
             </ul>
           </li>
+          
+          <!-- Jane Black Column -->
           <li class="footer__column column">
             <h3 class="column__title">Jane Black</h3>
             <ul class="column__list">
@@ -393,7 +458,10 @@
             </ul>
           </li>
         </ul>
+        
+        <!-- Footer Address and Social Media -->
         <div class="footer__address-info">
+          <!-- Footer Address -->
           <address class="footer__address">
             <ul class="footer__address-list address__list">
               <li class="footer__address-item">
@@ -410,6 +478,8 @@
               </li>
             </ul>
           </address>
+          
+          <!-- Footer Social Media Icons -->
           <ul class="nav__list social-icons">
             <li class="social-icons__item">
               <a class="social-icons__link" href="#">
@@ -430,6 +500,8 @@
       </div>
     </div>
   </footer>
+  
+  <!-- JavaScript File -->
   <script src="index.js"></script>
 </body>
 
